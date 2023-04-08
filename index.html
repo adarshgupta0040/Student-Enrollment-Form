@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Page</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.prosperousns.ie/uploads/2/5/0/4/25048510/enrollment-forms_orig.png" />
+
+    <script src="myscript.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <header>  
+         <div id="header" class="jumbotron text-center"> 
+            <!--jumbotron text-center: for responsive & centre align -->
+            <h3 id="heading">Student Enrollment Form</h3>
+        </div>    
+    </header>
+    
+    
+    <main> 
+        <div id="fullPage" class="container">
+        <!--  for full content :- form,verticalLine & displayPage-->
+            <div id="outerForm">
+                <div id="form-mains" > <!-- for form -->
+                    <form id="myForm">
+                    <!-- Using form tag -->
+                        <div>
+                            <!-- Taking input for the name -->
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                            <input  type="text" id="name"  placeholder="Enter your name" required/>
+
+                            <!-- for error message of the name Validation  -->
+                            <label id="nameLabel" class="errorMessage" for="">**</label>
+                        </div>
+    
+                        <div>
+                            <!-- Taking input for the email -->
+                            <label for="email" class="col-sm-2 col-form-label">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email id" required/>
+
+                            <!-- for error message of the email Validation  -->
+                            <label id="emailLabel" class="errorMessage" style="color: red; visibility:hidden;" for="">Invalid Email</label>
+                        </div>
+    
+                        <div>
+                            <!-- Taking input for the webite -->
+                            <label for="website" class="col-sm-2 col-form-label">Website</label>
+                            <input type="url" id="website" placeholder="Enter your website" required/>
+                            
+                            <!-- for error message of the website Validation  -->
+                            <label id="websiteLabel" class="errorMessage" style="color: red; visibility:hidden;" for="">Invalid URL</label>
+                        </div>
+    
+                        <div >
+                            <!-- Taking input for the Image -->
+                            <label for="imageLink" class="col-sm-2 col-form-label">Image Link</label>
+                            <input type="url" id="imageLink" placeholder="Profile Photo link" required>
+
+                            <!-- for error message of the image Validation -->
+                            <label id="imgLabel" class="errorMessage" style="color: red; visibility:hidden;" for="">Invalid URL</label>
+                        </div>
+
+                        
+
+                        <div>
+                            <span>
+                                <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+                            </span>
+                            <span>
+                                <!-- Taking input for the Gender using radio button -->
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="genderChoice" id="male" value="Male">
+                                    <label class="form-check-label" id="forMale" for="male">Male</label>
+                                </div>
+
+                                <div id="femaleButton" class="form-check form-check-inline" >
+                                    <input class="form-check-input" type="radio" name="genderChoice" id="female" value="Female">
+                                    <label class="form-check-label" for="female" id="forFemale">Female</label>
+                                </div>
+                            </span>
+                        </div>
+
+    
+                        <div >
+                            <label for="name" class="col-sm-2 col-form-label">Skills</label>
+                            
+                            <!-- Taking input for the Gender using Checkbox button -->
+                            <div class="form-check form-check-inline" style="width: 60px;" >
+                                <input class="form-check-input" type="checkbox" name="skillChoices" id="java" value="Java">
+                                <label class="form-check-label" for="java">Java</label>
+                            </div>
+                            <div class="form-check form-check-inline" style="width: 60px;">
+                                <input class="form-check-input" type="checkbox" name="skillChoices" id="html" value="HTML">
+                                <label class="form-check-label" for="html">HTML</label>
+                            </div>
+                            <div class="form-check form-check-inline" style="width: 60px;">
+                                <input class="form-check-input" type="checkbox" name="skillChoices" id="css" value="CSS">
+                                <label class="form-check-label" for="css">CSS</label>
+                            </div>
+                        </div>
+                        <br>
+                            
+
+                        <div>
+                            <!-- Adding enroll button for submission and display -->
+                            <button type="button" id="submit" onclick="addInfo()" class="btn btn-primary" >Enroll Student</button>
+
+                            <!-- Clear button for clearing the form -->
+                            <input type="reset" value="Clear" class= "btn btn-danger">
+                        </div>
+                        <br>
+
+
+                        <!-- error message display -->
+                        <p id="errorMsg" class="errorMessage">*Please Fill all the fields in the form !</p>
+                    </form>
+                </div>
+            </div>
+
+            <div > <!-- for partitioning using vertical Line -->
+                <p id="vertical"></p>
+            </div>
+
+            <!-- For Displaying enrolled student information -->
+            <div id="tableSection" class="col-sm-5">
+                <h2 id="displayTable">Enrolled Students</h2>
+                <table id="productTable" class="table table-bordered table-condensed  table-striped" title="Enrolled Students">
+                    <thead id="OutputTable">
+                        <tr>
+                            <th id ="description">Description</th>
+                            <th id ="image">Image</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+    <!-- Assigning the footer -->
+        <div >
+            <h6 id="FooterHead"> Copyright &copy; 2023-2024 by Fresher Training  </h6>
+        </div>
+    </footer>
+
+</body>
+</html>

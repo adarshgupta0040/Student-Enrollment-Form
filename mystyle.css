@@ -1,0 +1,200 @@
+#fullPage
+{
+    display: flex ; 
+    flex-direction: row; 
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#header
+{
+    background-color: #00CCAA;
+    padding: 10px;
+    color: white;
+}
+
+#heading{
+    font-size: 30px;
+}
+
+#displaytable
+{
+    width:50%; float: right; display: inline-block;
+}
+
+#displaytableheader
+{
+    text-align: center;
+}
+
+
+label{
+    width: 100px;
+    display: inline-block;
+}
+
+.errorMessage{
+    color: red;
+    font-weight: bold;
+    visibility:hidden;
+}
+
+#form{
+    padding-top: 40px;
+}
+
+#displayTableheader
+{
+    text-align: center;
+    
+}
+
+.col-sm-2 {
+    flex: 0 0 auto;
+    width: 25.%;
+  }
+
+.form-check-inline {
+    display: inline-block;
+    margin-right: 1rem;
+    padding-right: 20px;
+}
+
+#FooterHead{
+    background-color: #00CCAA;
+    padding: 5px;
+    color: white;
+    text-align:center; 
+    margin: 0px;
+    bottom: 0; left: 0; width: 100%
+}
+
+#vertical {
+    border-left: 3px solid #00CCAA;
+    height: 300px;
+    /* left: 45%; */
+    /* text-align: right; */
+  }
+
+
+#productTable{
+    
+    
+    margin-top: 40px;
+
+}
+
+div#form-mains {
+    padding: 20px;
+}
+div#outerForm {
+    margin-top: 10px;
+}
+
+#displayTable{
+    text-align: center;
+}
+
+#OutputTable{
+    background-color: rgb(159, 197, 70);
+    color: whitesmoke;
+}
+
+/* .col-sm-5 {
+    padding-left: 40px;
+} */
+
+#tableSection{
+    padding-left: 40px;
+}
+
+.animated {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+
+tr:nth-child(even) {
+    background-color: rgb(247, 247, 192);
+    padding: 0 0 0 0;
+    font-size: 13px
+}
+tr:nth-child(odd) {
+    padding: 0 0 0 0;
+    font-size:13px;
+}
+
+#errorMsg
+{
+    color: rgb(255, 0, 0); 
+    visibility: hidden;
+}
+
+#submit{
+    margin-right: 20px;
+}
+
+#femaleButton{
+    width: 100%;
+    margin-left: 26%;
+}
+@media screen and (max-width:992px) {
+    #femaleButton{
+        margin-left: 28%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    #fullPage{
+        flex-direction: column;
+    }
+    #vertical {
+        height:0px !important;
+        width: auto !important;
+        border-left:  0px !important;
+        border-bottom: 3px solid #00CCAA !important;
+    }
+    #tableSection{
+        width: auto;
+        padding-left: 0px;
+    }
+    #outerForm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #femaleButton{
+        margin-left: 26%;
+    }
+}
